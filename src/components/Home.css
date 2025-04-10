@@ -1,0 +1,7 @@
+.Home {
+    font-size: 25vmin;
+    height: calc(100dvh - 10vmin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

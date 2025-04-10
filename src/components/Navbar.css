@@ -1,0 +1,47 @@
+.Navbar {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#logo {
+    font-size: 10vmin;
+}
+
+*::selection {
+    background-color: white;
+    color: black;
+}
+
+#links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 60%;
+    font-size: 3.75vmin;
+}
+
+#links li {
+    transform: skew(15deg);
+    width: 10vw;
+    padding-block: 0.5rem;
+}
+
+#links a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+    transform: skew(-15deg);
+    transition: background-color 250ms linear, color 250ms linear;
+}
+
+#links li:hover,
+#links li:focus,
+#links li.active {
+    color: black;
+    background-color: white;
+}
