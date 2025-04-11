@@ -4,42 +4,36 @@ import "./Navbar.css";
 export default function Navbar() {
 
     const [activeLink, setActiveLink] = useState("home");
-    const [cursor, setCursor] = useState("default");
-
-    const changeCursor = () => {
-        document.body.style.cursor = (cursor === "default") ? 'url("/cursor.cur") 10 10, auto' : "default";
-        setCursor((cursor === "default") ? 'url("/cursor.cur") 10 10, auto' : "default")
-    }
 
     return (
         <nav className="Navbar">
-            <div id="logo" onClick={changeCursor} title="Click the logo to change the cursor style">&lt;bhavi-th/&gt;</div>
+            <div id="logo">&lt;bhavi-th/&gt;</div>
             <ul id="links">
-                <li className={activeLink === "home" ? "active" : ""} onClick={() => setActiveLink("home")} >
-                    <a href="#home">
+                <a href="#home" className={activeLink === "home" ? "active" : ""} onClick={() => setActiveLink("home")}>
+                    <li>
                         Home
-                    </a>
-                </li>
-                <li className={activeLink === "about" ? "active" : ""} onClick={() => setActiveLink("about")} >
-                    <a href="#about">
+                    </li>
+                </a>
+                <a href="#about" className={activeLink === "about" ? "active" : ""} onClick={() => setActiveLink("about")}>
+                    <li>
                         About
-                    </a>
-                </li>
-                <li className={activeLink === "projects" ? "active" : ""} onClick={() => setActiveLink("projects")} >
-                    <a href="#projects">
+                    </li>
+                </a>
+                <a href="#projects" className={activeLink === "projects" ? "active" : ""} onClick={() => setActiveLink("projects")}>
+                    <li>
                         Projects
-                    </a>
-                </li>
-                <li className={activeLink === "skills" ? "active" : ""} onClick={() => setActiveLink("skills")} >
-                    <a href="#skills">
+                    </li>
+                </a>
+                <a href="#skills" className={activeLink === "skills" ? "active" : ""} onClick={() => setActiveLink("skills")}>
+                    <li>
                         Skills
-                    </a>
-                </li>
-                <li className={activeLink === "contact" ? "active" : ""} onClick={() => setActiveLink("contact")} >
-                    <a href="#contact">
+                    </li>
+                </a>
+                <a href="#contact" className={activeLink === "contact" ? "active" : ""} onClick={() => setActiveLink("contact")}>
+                    <li>
                         Contact
-                    </a>
-                </li>
+                    </li>
+                </a>
             </ul>
         </nav>
     );

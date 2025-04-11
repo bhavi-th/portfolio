@@ -1,0 +1,28 @@
+.About {
+    padding-top: 10vmin;
+    padding-inline: 2.5rem;
+    height: 100dvh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 5rem;
+    font-size: 5vmin;
+}
+
+.About p {
+    text-indent: 2.5rem;
+}
+
+#journey {
+    grid-row: 2;
+}
+
+.About img {
+    height: 80%;
+    width: 80%;
+    border: 1px solid white;
+    grid-row: span 2;
+    text-align: center;
+}

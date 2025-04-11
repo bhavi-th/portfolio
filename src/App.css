@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@font-face {
+    font-family: 'Jersey 15';
+    src: url('assets/Jersey15-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     padding: 0;
@@ -7,10 +12,19 @@
     font-family: "Jersey 15", monospace;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     position: relative;
     height: 100dvh;
     background-color: black;
     cursor: default;
     color: white;
+}
+
+a:hover,
+#logo {
+    cursor: url('../public/cursor.cur'), auto;
 }

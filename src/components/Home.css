@@ -1,7 +1,39 @@
 .Home {
-    font-size: 25vmin;
-    height: calc(100dvh - 10vmin);
+    font-size: 10vmin;
+    height: 100dvh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-top: 10vmin;
+    background: radial-gradient(circle at top left, rgb(0, 125, 255) 10%, black, black, black);
+}
+
+#name {
+    color: black;
+    text-shadow: 0px 0px 5px white;
+    transition: text-shadow 250ms linear, color 250ms linear;
+}
+
+#name:hover {
+    text-shadow: 0px 0px 10px white;
+    color: white;
+}
+
+.Home a {
+    text-decoration: none;
+    font-size: 3.5vmin;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 0.75rem;
+    background-color: white;
+    color: black;
+    transition: background-color 250ms linear, color 250ms linear;
+}
+
+.Home a:hover,
+.Home a:focus {
+    box-shadow: 0px 0px 15px white;
+    background-color: black;
+    color: white;
 }
