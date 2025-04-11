@@ -6,7 +6,7 @@ export default function Home() {
     const [text, setText] = useState("");
 
     useEffect(() => {
-        const fullText = `Hi, I’m <span id="name">Bhavith</span>, A Web Developer and Student based in Bengaluru.`;
+        const fullText = `Hi, I’m <span id="name">Bhavith</span>,<br> A Web Developer and Student based in Bengaluru. `;
         let index = 0;
 
         const typeText = () => {
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="Home" id="home">
             <p>
                 <span dangerouslySetInnerHTML={{ __html: text }}></span>
-                <span className="cursor">|</span>
+                <div id="cursor"></div>
             </p>
             <a href="#projects">View my work</a>
         </div>
