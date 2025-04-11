@@ -2,6 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    padding: 0.5rem;
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
@@ -12,18 +13,51 @@
 
 #logo {
     font-size: 10vmin;
+    text-shadow: 0px 0px 25px white;
+    animation: flicker 2.5s linear;
 }
 
-#logo:hover {
+@keyframes flicker {
+
+    0%,
+    30%,
+    50%,
+    100% {
+        text-shadow: 0px 0px 15px white;
+    }
+
+    25%,
+    40%,
+    90% {
+        text-shadow: none;
+    }
+}
+
+/* #logo:hover {
     text-shadow: 0px 0px 15px white;
+} */
+
+#hamburger {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    height: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-*::selection {
+#hamburger * {
+    height: .75vmin;
+    width: 40px;
     background-color: white;
-    color: black;
+    transform: skew(15deg);
+    box-shadow: 0px 0px 15px white;
 }
 
-#links {
+.Navbar ul {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
@@ -55,4 +89,34 @@
 
 #links a:hover {
     border: 1px solid white;
+}
+
+@media screen and (max-width:720px) {
+
+    .Navbar {
+        flex-direction: column;
+    }
+
+
+    #hamburger {
+        display: flex;
+    }
+
+    .Navbar ul {
+        height: 0px;
+        overflow: hidden;
+        transition: height 2s linear;
+    }
+
+    #links {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .Navbar ul.show-links {
+        height: 50vmin;
+    }
+
 }

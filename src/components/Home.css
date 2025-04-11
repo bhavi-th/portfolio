@@ -6,13 +6,18 @@
     justify-content: space-evenly;
     flex-direction: column;
     padding-top: 10vmin;
-    background: radial-gradient(circle at top left, rgb(0, 125, 255) 10%, black, black, black);
+    padding-inline: 5vmin;
+}
+
+.Home p {
+    text-shadow: 0px 0px 2.5px black;
 }
 
 #name {
     color: black;
     text-shadow: 0px 0px 5px white;
     transition: text-shadow 250ms linear, color 250ms linear;
+    cursor: url('/public/cursor.cur'), auto;
 }
 
 #name:hover {

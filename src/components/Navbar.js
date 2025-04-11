@@ -4,11 +4,22 @@ import "./Navbar.css";
 export default function Navbar() {
 
     const [activeLink, setActiveLink] = useState("home");
+    const [hamClicked, setHamClicked] = useState(false);
+
+    const toggleMenu = (ele) => {
+        ele.target.className = !hamClicked ? "active" : "";
+        setHamClicked((prev) => !prev);
+    }
 
     return (
         <nav className="Navbar">
             <div id="logo">&lt;bhavi-th/&gt;</div>
-            <ul id="links">
+            <div id="hamburger" onClick={toggleMenu}>
+                <div id="ham-first"></div>
+                <div id="ham-mid"></div>
+                <div id="ham-last"></div>
+            </div>
+            <ul id="links" className={hamClicked ? "show-links" : ""}>
                 <a href="#home" className={activeLink === "home" ? "active" : ""} onClick={() => setActiveLink("home")}>
                     <li>
                         Home
