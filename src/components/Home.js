@@ -22,12 +22,11 @@ export default function Home() {
     }, [])
 
     return (
-        <div className="Home" id="home">
+        <section className="Home" id="home">
             <p>
                 <span dangerouslySetInnerHTML={{ __html: text }}></span>
-                <div id="cursor"></div>
             </p>
             <a href="#projects">View my work</a>
-        </div>
+        </section>
     );
 }

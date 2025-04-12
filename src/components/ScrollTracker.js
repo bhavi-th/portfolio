@@ -18,10 +18,9 @@ const ScrollTracker = () => {
     return (
         <div style={{
             position: "fixed",
-            top: "11.75vmin",
-            left: 0,
+            top: "calc(1rem + 9.5vmin)",
             width: `${scrollWidth}%`,
-            height: "8px",
+            height: "3px",
             backgroundColor: "white",
             transition: "width 0.1s ease-out"
         }} />

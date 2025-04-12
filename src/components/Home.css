@@ -1,5 +1,5 @@
 .Home {
-    font-size: 10vmin;
+    font-size: 8vmin;
     height: 100dvh;
     display: flex;
     align-items: center;
@@ -7,6 +7,7 @@
     flex-direction: column;
     padding-top: 10vmin;
     padding-inline: 5vmin;
+    background: radial-gradient(circle at top left, rgb(0, 0, 100), black 40%);
 }
 
 .Home p {
@@ -14,6 +15,7 @@
 }
 
 #name {
+    font-size: 10vmin;
     color: black;
     text-shadow: 0px 0px 5px white;
     transition: text-shadow 250ms linear, color 250ms linear;
@@ -29,9 +31,9 @@
 .Home a {
     text-decoration: none;
     font-size: 3.5vmin;
-    padding: 1rem;
+    padding: 0.75rem;
     border: 1px solid white;
-    border-radius: 0.75rem;
+    border-radius: 0.25rem;
     background-color: white;
     color: black;
     transition: background-color 250ms linear, color 250ms linear;
@@ -42,24 +44,4 @@
     box-shadow: 0px 0px 15px white;
     background-color: black;
     color: white;
-}
-
-#cursor {
-    display: inline-block;
-    height: 7vmin;
-    width: 1vmin;
-    background-color: white;
-    animation: blink 2s infinite linear;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 0.2;
-    }
-
-    50% {
-        opacity: 1;
-    }
 }

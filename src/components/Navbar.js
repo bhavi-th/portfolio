@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -11,6 +11,22 @@ export default function Navbar() {
         setHamClicked((prev) => !prev);
     }
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveLink(entry.target.id);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll("section").forEach((section) => {
+            observer.observe(section);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <nav className="Navbar">
             <div id="logo">&lt;bhavi-th/&gt;</div>
@@ -20,27 +36,27 @@ export default function Navbar() {
                 <div id="ham-last"></div>
             </div>
             <ul id="links" className={hamClicked ? "show-links" : ""}>
-                <a href="#home" className={activeLink === "home" ? "active" : ""} onClick={() => setActiveLink("home")}>
+                <a href="#home" className={activeLink === "home" ? "active" : ""}>
                     <li>
                         Home
                     </li>
                 </a>
-                <a href="#about" className={activeLink === "about" ? "active" : ""} onClick={() => setActiveLink("about")}>
+                <a href="#about" className={activeLink === "about" ? "active" : ""}>
                     <li>
                         About
                     </li>
                 </a>
-                <a href="#projects" className={activeLink === "projects" ? "active" : ""} onClick={() => setActiveLink("projects")}>
+                <a href="#projects" className={activeLink === "projects" ? "active" : ""}>
                     <li>
                         Projects
                     </li>
                 </a>
-                <a href="#skills" className={activeLink === "skills" ? "active" : ""} onClick={() => setActiveLink("skills")}>
+                <a href="#skills" className={activeLink === "skills" ? "active" : ""}>
                     <li>
                         Skills
                     </li>
                 </a>
-                <a href="#contact" className={activeLink === "contact" ? "active" : ""} onClick={() => setActiveLink("contact")}>
+                <a href="#contact" className={activeLink === "contact" ? "active" : ""}>
                     <li>
                         Contact
                     </li>

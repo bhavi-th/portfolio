@@ -3,55 +3,39 @@
     top: 0;
     width: 100%;
     padding: 0.5rem;
-    backdrop-filter: blur(5px);
-    display: flex;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid white;
+    display: grid;
     align-items: center;
     justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
     color: white;
-    border-bottom: 1px solid white;
 }
 
 #logo {
-    font-size: 10vmin;
+    font-size: 8vmin;
     text-shadow: 0px 0px 25px white;
     animation: flicker 2.5s linear;
+    transition: text-shadow 250ms linear;
 }
 
-@keyframes flicker {
-
-    0%,
-    30%,
-    50%,
-    100% {
-        text-shadow: 0px 0px 15px white;
-    }
-
-    25%,
-    40%,
-    90% {
-        text-shadow: none;
-    }
+#logo:hover,
+#logo:focus {
+    text-shadow: 0px 0px 5px white;
 }
-
-/* #logo:hover {
-    text-shadow: 0px 0px 15px white;
-} */
 
 #hamburger {
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    height: 40px;
+    height: 8vmin;
     display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.5vmin;
 }
 
 #hamburger * {
     height: .75vmin;
-    width: 40px;
+    width: 8vmin;
     background-color: white;
     transform: skew(15deg);
     box-shadow: 0px 0px 15px white;
@@ -60,9 +44,10 @@
 .Navbar ul {
     display: flex;
     justify-content: space-evenly;
+    gap: 0.25rem;
     list-style: none;
-    width: 60%;
-    font-size: 3.75vmin;
+    width: 100%;
+    font-size: 3vmin;
 }
 
 #links a {
@@ -72,7 +57,8 @@
     transform: skew(15deg);
     width: 10vw;
     border: 1px solid transparent;
-    padding-block: 0.5rem;
+    border-radius: 0.25rem;
+    padding-block: 2.5vmin;
     transition: background-color 250ms linear, color 250ms linear;
 }
 
@@ -91,7 +77,7 @@
     border: 1px solid white;
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:1024px) {
 
     .Navbar {
         flex-direction: column;
@@ -103,6 +89,7 @@
     }
 
     .Navbar ul {
+        grid-column: span 2;
         height: 0px;
         overflow: hidden;
         transition: height 2s linear;
@@ -116,7 +103,11 @@
     }
 
     .Navbar ul.show-links {
-        height: 50vmin;
+        height: 75vmin;
+    }
+
+    #links a {
+        width: 50%;
     }
 
 }

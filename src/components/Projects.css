@@ -1,0 +1,15 @@
+.Projects {
+    padding-top: 15vmin;
+    padding-inline: 2.5rem;
+    background: radial-gradient(circle at bottom left, rgb(0, 100, 255), black 40%);
+    font-size: 5vmin;
+}
+
+.Projects fieldset {
+    padding: 1rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+}
