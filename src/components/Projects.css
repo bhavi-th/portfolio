@@ -1,8 +1,9 @@
 .Projects {
     padding-top: 15vmin;
     padding-inline: 2.5rem;
+    padding-bottom: 2.5rem;
     background: radial-gradient(circle at bottom left, rgb(0, 100, 255), black 40%);
-    font-size: 5vmin;
+    font-size: 6vmin;
 }
 
 .Projects fieldset {
