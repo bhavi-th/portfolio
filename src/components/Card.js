@@ -4,7 +4,7 @@ export default function Card(props) {
     return (
         <div className="Card">
             <img alt={props.alt} src={props.src} />
-            <div>
+            <div className="project-details">
                 <span className="card-header">
                     {props.header}
                 </span>
@@ -12,8 +12,9 @@ export default function Card(props) {
                     {props.desc}
                 </span>
             </div>
-            <div>
-                <a href={props.link}>Project </a>
+            <div className="project-links">
+                <a href={props.site}>Visit</a>
+                <a href={props.source}>Code</a>
             </div>
         </div>
     )

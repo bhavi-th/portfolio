@@ -25,7 +25,7 @@ export default function About() {
                         Location
                     </span>
                     <br />
-                    Bengaluru, India
+                    Bengaluru, Karnataka, India
                 </div>
                 <div>
                     <span className="invert-color">
@@ -49,7 +49,7 @@ export default function About() {
                     Kannada, English
                 </div>
             </fieldset>
-            <img alt="My Profile" src={profile} />
+            <img className="about-image" alt="My Profile" src={profile} />
             <p id="intro">
                 Hi there! I'm Bhavith S,
                 a tech enthusiast and web developer who enjoys creating efficient and user-friendly digital experiences.

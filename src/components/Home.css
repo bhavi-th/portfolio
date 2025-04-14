@@ -7,7 +7,7 @@
     flex-direction: column;
     padding-top: 10vmin;
     padding-inline: 5vmin;
-    background: radial-gradient(circle at top left, rgb(0, 0, 100), black 40%);
+    background: radial-gradient(circle at top left, #008080, black 50%);
 }
 
 .Home p {
