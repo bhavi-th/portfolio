@@ -1,7 +1,7 @@
 .About {
     padding-top: 15vmin;
     padding-inline: 2.5rem;
-    min-height: 100dvh;
+    /* min-height: 100dvh; */
     display: grid;
     align-items: center;
     justify-items: center;
@@ -17,7 +17,6 @@
 }
 
 .About fieldset {
-    height: 90%;
     width: 90%;
     border: 1px solid white;
     grid-row: span 3;
@@ -25,7 +24,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    column-gap: 1rem;
+    gap: 1rem;
 }
 
 .About img {

@@ -1,6 +1,7 @@
 .Navbar {
     position: fixed;
     top: 0;
+    height: 12vmin;
     width: 100%;
     padding: 0.5rem;
     backdrop-filter: blur(15px);
@@ -13,6 +14,7 @@
 }
 
 #logo {
+    margin-left: 1rem;
     font-size: 8vmin;
     text-shadow: 0px 0px 25px white;
     animation: flicker 2.5s linear;
@@ -25,12 +27,11 @@
 }
 
 #hamburger {
-    height: 8vmin;
     display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 1.5vmin;
+    gap: 1.25vmin;
 }
 
 #hamburger * {
@@ -80,9 +81,8 @@
 @media screen and (max-width:1024px) {
 
     .Navbar {
-        flex-direction: column;
+        padding: 0px;
     }
-
 
     #hamburger {
         display: flex;
@@ -92,11 +92,11 @@
         grid-column: span 2;
         height: 0px;
         overflow: hidden;
-        transition: height 2s linear;
+        transition: height 250ms linear;
     }
 
     #links {
-        margin-top: 1rem;
+        margin-top: 0px;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
