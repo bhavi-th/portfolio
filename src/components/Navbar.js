@@ -27,6 +27,10 @@ export default function Navbar() {
         return () => observer.disconnect();
     }, []);
 
+    const toggleTheme = () => {
+        document.body.classList.toggle("inverted");
+    };
+
     return (
         <nav className="Navbar">
             <div id="logo">&lt;bhavi-th/&gt;</div>
@@ -61,6 +65,7 @@ export default function Navbar() {
                         Contact
                     </li>
                 </a>
+                <div id="theme" title="Click to change the site theme" onClick={toggleTheme}></div>
             </ul>
         </nav>
     );

@@ -30,7 +30,9 @@ body {
 }
 
 a:hover,
-#logo {
+#logo,
+#name,
+#theme {
     cursor: url('../public/cursor.cur'), auto;
 }
 

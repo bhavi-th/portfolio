@@ -26,6 +26,11 @@
     text-shadow: 0px 0px 5px white;
 }
 
+.inverted #logo:hover,
+.inverted #logo:focus {
+    text-shadow: 0px 0px 5px black;
+}
+
 #hamburger {
     display: none;
     align-items: center;
@@ -45,6 +50,7 @@
 .Navbar ul {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     gap: 0.25rem;
     list-style: none;
     width: 100%;
@@ -78,6 +84,14 @@
     border: 1px solid white;
 }
 
+#theme {
+    height: 5dvh;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: white;
+    margin-inline: 2.5dvw;
+}
+
 @media screen and (max-width:1024px) {
 
     .Navbar {
@@ -103,11 +117,58 @@
     }
 
     .Navbar ul.show-links {
-        height: 75vmin;
+        height: 80vmin;
     }
 
     #links a {
         width: 50%;
     }
 
+}
+
+.inverted {
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid white;
+}
+
+.inverted .Navbar {
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.inverted #logo {
+    text-shadow: 0px 0px 25px black;
+}
+
+.inverted #hamburger * {
+    background-color: black;
+    box-shadow: 0px 0px 15px black;
+}
+
+.inverted #links a {
+    color: black;
+    background-color: white;
+}
+
+.inverted #links a:focus,
+.inverted #links a.active {
+    color: white;
+    background-color: black;
+}
+
+.inverted #links a:hover {
+    border: 1px solid black;
+}
+
+.inverted #theme {
+    background-color: black;
+}
+
+#scroll-tracker {
+    background-color: white;
+}
+
+.inverted #scroll-tracker {
+    background-color: black;
 }
