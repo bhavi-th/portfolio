@@ -17,12 +17,6 @@
     color: white;
 }
 
-#roles {
-    font-size: 5.5vmin;
-    font-weight: bold;
-    margin-block: 2vmin;
-}
-
 #roles::first-letter {
     font-size: 6vmin;
 }
