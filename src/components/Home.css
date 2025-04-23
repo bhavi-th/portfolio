@@ -48,6 +48,7 @@
 }
 
 #social-links img {
+    height: 8vmin;
     border-radius: 25%;
 }
 
@@ -98,4 +99,19 @@
 .inverted .Home button:hover {
     background-color: white;
     color: black;
+}
+
+@media (max-width:1024px) {
+    .Home {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    #social-links {
+        grid-row: 3/4;
+    }
+
+    .Home p {
+        width: 100%;
+    }
 }

@@ -105,6 +105,7 @@
     .Navbar ul {
         grid-column: span 2;
         height: 0px;
+        backdrop-filter: blur(15px);
         overflow: hidden;
         transition: height 250ms linear;
     }

@@ -14,10 +14,10 @@ function Home({ themeInverted }) {
             <span id="name">Bhavith S</span>
             <ul id="social-links">
                 {console.log(themeInverted)}
-                <li><a href="https://github.com/bhavi-th" target="_blank" rel="noreferrer"><img src={themeInverted ? GithubInverted : Github} alt="social links" height="45" /></a></li>
-                <li><a href="https://www.linkedin.com/in/bhavith-s/" target="_blank" rel="noreferrer"><img src={themeInverted ? LinkedInInverted : LinkedIn} alt="social links" height="45" /></a></li>
-                <li><a href="mailto:bhaviths20@gmail.com" target="_blank" rel="noreferrer"><img src={themeInverted ? MailInverted : Mail} alt="social links" height="45" /></a></li>
-                <li><a href="https://wa.me/919901949627" target="_blank" rel="noreferrer"><img src={themeInverted ? WhatsappInverted : Whatsapp} alt="social links" height="45" /></a></li>
+                <li><a href="https://github.com/bhavi-th" target="_blank" rel="noreferrer"><img src={themeInverted ? GithubInverted : Github} alt="social links" /></a></li>
+                <li><a href="https://www.linkedin.com/in/bhavith-s/" target="_blank" rel="noreferrer"><img src={themeInverted ? LinkedInInverted : LinkedIn} alt="social links" /></a></li>
+                <li><a href="mailto:bhaviths20@gmail.com" target="_blank" rel="noreferrer"><img src={themeInverted ? MailInverted : Mail} alt="social links" /></a></li>
+                <li><a href="https://wa.me/919901949627" target="_blank" rel="noreferrer"><img src={themeInverted ? WhatsappInverted : Whatsapp} alt="social links" /></a></li>
             </ul>
             <p>
                 Welcome! I’m passionate about bringing ideas to life through coding,
