@@ -1,39 +1,101 @@
 .Home {
+    padding-top: 16vmin;
     min-height: 100dvh;
-    padding: 5dvw;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    font-size: 4.5vmin;
+    padding-inline: 5vmin;
 }
 
 #name {
-    font-size: 11.5vmin;
-    color: black;
-    text-shadow: 0px 0px 0.5rem white;
+    width: max-content;
+    color: white;
+    letter-spacing: 0.5vmin;
+    font-size: 14vmin;
+    padding-block: 2.5vmin;
+    transition: color 250ms linear, text-shadow 250ms linear;
 }
 
 #name:hover {
-    color: white;
-}
-
-#roles::first-letter {
-    font-size: 6vmin;
-}
-
-#short-intro {
-    margin-block: 2.5vmin;
-    font-size: 4vmin;
-    text-indent: 3.5vmin;
-    width: 70%;
-}
-
-#short-intro::first-letter {
-    font-size: 4.5vmin;
-    font-weight: bold;
+    color: black;
+    text-shadow: 0px 0px 5px white;
 }
 
 .inverted #name {
+    color: black;
+}
+
+.inverted #name:hover {
     color: white;
-    text-shadow: 0px 0px 0.5rem black;
+    text-shadow: 0px 0px 5px black;
+}
+
+#social-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#social-links li {
+    height: 1vmin;
+    width: 8vmin;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#social-links img {
+    border-radius: 25%;
+}
+
+#social-links li:hover {
+    box-shadow: 0px 0px 15px white;
+}
+
+.inverted #social-links li:hover {
+    box-shadow: 0px 0px 5px 5px black;
+}
+
+.Home p {
+    grid-column: span 2;
+    width: 75%;
+    text-indent: 2.5vmin;
+}
+
+.Home p::first-letter {
+    font-size: 6vmin;
+}
+
+.Home button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    grid-column: span 2;
+    width: max-content;
+    border: 1px solid white;
+    border-radius: 1vmin;
+    background-color: white;
+    color: black;
+    padding: 2.5vmin;
+    font-size: 5vmin;
+    transition: color 250ms linear, background-color 250ms linear;
+}
+
+.Home button:hover {
+    color: white;
+    background-color: black;
+}
+
+.inverted .Home button {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.inverted .Home button:hover {
+    background-color: white;
+    color: black;
 }

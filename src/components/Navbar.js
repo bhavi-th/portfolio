@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ setTheme }) {
 
     const [activeLink, setActiveLink] = useState("home");
     const [hamClicked, setHamClicked] = useState(false);
@@ -29,6 +29,7 @@ export default function Navbar() {
 
     const toggleTheme = () => {
         document.body.classList.toggle("inverted");
+        setTheme(prev => !prev);
     };
 
     return (

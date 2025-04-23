@@ -32,7 +32,8 @@ body {
 a:hover,
 #logo,
 #name,
-#theme {
+#theme,
+.Home button {
     cursor: url('../public/cursor.cur'), auto;
 }
 

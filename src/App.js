@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import "./App.css"
 import About from "./components/About.js";
 import Home from "./components/Home.js";
@@ -9,11 +10,13 @@ import Contact from "./components/Contact.js";
 
 function App() {
 
+  const [themeInverted, setThemeInverted] = useState(false);
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar setTheme={setThemeInverted} />
       <ScrollTracker />
-      <Home />
+      <Home themeInverted={themeInverted} />
       <hr />
       <About />
       <hr />
