@@ -1,9 +1,25 @@
 import "./Footer.css";
+import Github from "../assets/icon/github.svg";
+import LinkedIn from "../assets/icon/linkedin.svg";
+import Mail from "../assets/icon/mail.svg";
+import Whatsapp from "../assets/icon/whatsapp.svg";
+import GithubInverted from "../assets/icon/github-inverted.svg";
+import LinkedInInverted from "../assets/icon/linkedin-inverted.svg";
+import MailInverted from "../assets/icon/mail-inverted.svg";
+import WhatsappInverted from "../assets/icon/whatsapp-inverted.svg";
 
-function Footer() {
+function Footer({ themeInverted }) {
     return (
         <footer>
-            Copyrights &copy; 2025
+            <ul id="social-links" className="fade-elements">
+                <li><a href="https://github.com/bhavi-th" target="_blank" rel="noreferrer"><img src={themeInverted ? GithubInverted : Github} alt="social links" /></a></li>
+                <li><a href="https://www.linkedin.com/in/bhavith-s/" target="_blank" rel="noreferrer"><img src={themeInverted ? LinkedInInverted : LinkedIn} alt="social links" /></a></li>
+                <li><a href="mailto:bhaviths20@gmail.com" target="_blank" rel="noreferrer"><img src={themeInverted ? MailInverted : Mail} alt="social links" /></a></li>
+                <li><a href="https://wa.me/919901949627" target="_blank" rel="noreferrer"><img src={themeInverted ? WhatsappInverted : Whatsapp} alt="social links" /></a></li>
+            </ul>
+            <p>
+                &copy; 2025 Bhavith. All rights reserved
+            </p>
         </footer>
     )
 }

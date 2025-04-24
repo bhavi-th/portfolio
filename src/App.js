@@ -41,7 +41,7 @@ function App() {
       <hr />
       <Contact />
       <hr />
-      <Footer />
+      <Footer themeInverted={themeInverted} />
     </div>
   );
 }

@@ -1,9 +1,11 @@
 .Contact {
-    height: 100dvh;
+    min-height: 100dvh;
     padding-top: 12vmin;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 2.5vmin;
+    margin-bottom: 2.5vmin;
 }
 
 .Contact p {
@@ -36,13 +38,14 @@
 .Contact input,
 .Contact textarea,
 .Contact button {
-    padding: 0.25rem;
+    padding: 0.5rem;
     padding-left: 1vmin;
     font-size: 4vmin;
     outline: none;
     background-color: black;
     color: white;
     border: none;
+    border-radius: 1vmin;
 }
 
 .inverted .Contact input,
