@@ -1,4 +1,97 @@
 .Contact {
     height: 100dvh;
     padding-top: 12vmin;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Contact p {
+    padding: 2.5vmin;
+    font-size: 6.5vmin;
+    text-indent: 5vmin;
+}
+
+.Contact p::first-letter {
+    font-size: 8.5vmin;
+}
+
+.Contact form {
+    width: min-content;
+    padding: 2.5vmin;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2.5vmin;
+    display: grid;
+    gap: 2.5vmin;
+}
+
+.inverted .Contact form {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.Contact span {
+    font-size: 6vmin;
+}
+
+.Contact input,
+.Contact textarea,
+.Contact button {
+    padding: 0.25rem;
+    padding-left: 1vmin;
+    font-size: 4vmin;
+    outline: none;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.inverted .Contact input,
+.inverted .Contact textarea,
+.inverted .Contact button {
+    background-color: white;
+    color: black;
+}
+
+.Contact input:focus,
+.Contact textarea:focus {
+    outline: 2.5px solid white;
+}
+
+.inverted .Contact input:focus,
+.inverted .Contact textarea:focus {
+    outline: 2.5px solid black;
+}
+
+.Contact button {
+    cursor: pointer;
+    border-radius: 1vmin;
+    font-size: 6vmin;
+    color: rgb(0, 255, 0);
+    transition: background-color 250ms linear, color 250ms linear;
+}
+
+.inverted .Contact button {
+    color: white;
+    background-color: rgb(0, 255, 0);
+}
+
+.Contact button:hover {
+    color: black;
+    background-color: rgb(0, 255, 0);
+}
+
+.inverted .Contact button:hover {
+    color: rgb(0, 255, 0);
+    background-color: white;
+    box-shadow: inset 0px 0px 1px 2.5px rgb(0, 255, 0);
+}
+
+@media (max-width:1024px) {
+    .Contact {
+        flex-direction: column;
+    }
+
+    .Contact p {
+        width: 75%;
+    }
 }

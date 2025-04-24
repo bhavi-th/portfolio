@@ -54,7 +54,7 @@
     gap: 0.25rem;
     list-style: none;
     width: 100%;
-    font-size: 3vmin;
+    font-size: 4vmin;
 }
 
 #links a {
@@ -85,7 +85,7 @@
 }
 
 #theme {
-    height: 5dvh;
+    height: 6.5dvh;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: white;
@@ -120,7 +120,7 @@
     }
 
     .Navbar ul.show-links {
-        height: 80vmin;
+        height: 75dvh;
     }
 
     #links a {
@@ -151,7 +151,6 @@
 
 .inverted #links a {
     color: black;
-    background-color: white;
 }
 
 .inverted #links a:focus,

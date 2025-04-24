@@ -13,7 +13,6 @@ function Home({ themeInverted }) {
         <section id="home" className="Home">
             <span id="name" className="fade-elements">Bhavith S</span>
             <ul id="social-links" className="fade-elements">
-                {console.log(themeInverted)}
                 <li><a href="https://github.com/bhavi-th" target="_blank" rel="noreferrer"><img src={themeInverted ? GithubInverted : Github} alt="social links" /></a></li>
                 <li><a href="https://www.linkedin.com/in/bhavith-s/" target="_blank" rel="noreferrer"><img src={themeInverted ? LinkedInInverted : LinkedIn} alt="social links" /></a></li>
                 <li><a href="mailto:bhaviths20@gmail.com" target="_blank" rel="noreferrer"><img src={themeInverted ? MailInverted : Mail} alt="social links" /></a></li>

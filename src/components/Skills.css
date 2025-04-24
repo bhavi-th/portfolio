@@ -1,4 +1,7 @@
 .Skills {
-    height: 100dvh;
+    min-height: 100dvh;
     padding-top: 12vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

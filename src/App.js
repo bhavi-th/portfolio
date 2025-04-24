@@ -7,6 +7,7 @@ import ScrollTracker from "./components/ScrollTracker.js";
 import Projects from "./components/Projects.js";
 import Skills from "./components/Skills.js";
 import Contact from "./components/Contact.js";
+import Footer from "./components/Footer.js";
 
 function App() {
 
@@ -39,6 +40,8 @@ function App() {
       <Skills />
       <hr />
       <Contact />
+      <hr />
+      <Footer />
     </div>
   );
 }

@@ -56,7 +56,7 @@
 }
 
 .About p {
-    font-size: 3.5vmin;
+    font-size: 4.5vmin;
     text-indent: 2.5vmin;
 }
 
@@ -99,12 +99,12 @@
 }
 
 #about-details span {
-    font-size: 5vmin;
+    font-size: 5.5vmin;
 }
 
 #about-intro,
 #about-skills {
-    font-size: 3.5vmin;
+    font-size: 4.5vmin;
 }
 
 .fade-in {
