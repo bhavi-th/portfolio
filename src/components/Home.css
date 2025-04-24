@@ -38,26 +38,29 @@
     justify-content: space-evenly;
 }
 
-#social-links li {
-    height: 1vmin;
-    width: 8vmin;
-    display: flex;
-    align-items: end;
-    justify-content: center;
+#social-links a {
+    display: inline-block;
+    border: 1px solid white;
     border-radius: 50%;
+    padding: 2.5vmin;
+    height: 11vmin;
+}
+
+.inverted #social-links a {
+    border: 1px solid black;
 }
 
 #social-links img {
-    height: 8vmin;
-    border-radius: 25%;
+    height: 6vmin;
+    aspect-ratio: 1/1;
 }
 
-#social-links li:hover {
+#social-links a:hover {
     box-shadow: 0px 0px 15px white;
 }
 
-.inverted #social-links li:hover {
-    box-shadow: 0px 0px 5px 5px black;
+.inverted #social-links a:hover {
+    box-shadow: 0px 0px 15px black;
 }
 
 .Home p {
@@ -70,10 +73,8 @@
     font-size: 6vmin;
 }
 
-.Home button {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+.Home #btn-container a {
+    text-decoration: none;
     grid-column: span 2;
     width: max-content;
     border: 1px solid white;
@@ -81,30 +82,31 @@
     background-color: white;
     color: black;
     padding: 2.5vmin;
-    font-size: 5vmin;
     transition: color 250ms linear, background-color 250ms linear;
 }
 
-.Home button:hover {
+.inverted .Home #btn-container a {
+    border-color: black;
     color: white;
     background-color: black;
 }
 
-.inverted .Home button {
-    background-color: black;
+.Home #btn-container a:hover {
     color: white;
-    border: 1px solid black;
+    background-color: black;
 }
 
-.inverted .Home button:hover {
-    background-color: white;
+.inverted .Home #btn-container a:hover {
     color: black;
+    background-color: white;
 }
 
 @media (max-width:1024px) {
     .Home {
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: 1fr;
+        word-spacing: 0.25vmin;
+        min-height: 100dvh;
     }
 
     #social-links {
@@ -113,5 +115,12 @@
 
     .Home p {
         width: 100%;
+    }
+
+    .Home #btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-row: 4/5;
     }
 }

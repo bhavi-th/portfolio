@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import "./App.css"
 import About from "./components/About.js";
 import Home from "./components/Home.js";
@@ -11,6 +11,20 @@ import Contact from "./components/Contact.js";
 function App() {
 
   const [themeInverted, setThemeInverted] = useState(false);
+
+  useEffect(() => {
+    const elementsToObserve = document.querySelectorAll(".fade-elements");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        }
+      });
+    });
+
+    elementsToObserve.forEach((element) => observer.observe(element));
+  }, []);
 
   return (
     <div className="App">

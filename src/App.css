@@ -52,3 +52,15 @@ a:hover,
         text-shadow: none;
     }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5vmin);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
