@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5vmin;
-    height: max-content;
     width: 45vmin;
     margin: 2.5vmin;
     padding: 2.5vmin;
@@ -27,6 +26,17 @@
 .Skill-card img {
     height: 10vmin;
     width: 10vmin;
+}
+
+.Skill-card:hover #GitHub {
+    box-sizing: content-box;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.inverted .Skill-card:hover #GitHub {
+    background-color: none;
+    border-radius: 0%;
 }
 
 .Skill-card h3 {
