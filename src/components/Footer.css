@@ -7,6 +7,24 @@ footer {
     padding: 1rem;
 }
 
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    gap: 10vmin;
+}
+
 footer p {
     text-align: center;
+}
+
+@media (max-width:1024px) {
+    footer div {
+        display: block;
+        text-align: center;
+    }
 }

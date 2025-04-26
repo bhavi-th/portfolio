@@ -94,6 +94,10 @@
         flex-direction: column;
     }
 
+    .Contact form {
+        width: 95dvw;
+    }
+
     .Contact p {
         width: 75%;
     }
