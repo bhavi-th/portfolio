@@ -11,7 +11,13 @@ import Footer from "./components/Footer.js";
 
 function App() {
 
-  const [themeInverted, setThemeInverted] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") === "white"; // Get stored theme
+  });
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme ? "white" : "dark"); // Store theme preference
+  }, [theme]);
 
   useEffect(() => {
     const elementsToObserve = document.querySelectorAll(".fade-elements");
@@ -29,9 +35,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar setTheme={setThemeInverted} />
+      <Navbar setTheme={setTheme} />
       <ScrollTracker />
-      <Home themeInverted={themeInverted} />
+      <Home theme={theme} />
       <hr />
       <About />
       <hr />
@@ -41,7 +47,7 @@ function App() {
       <hr />
       <Contact />
       <hr />
-      <Footer themeInverted={themeInverted} />
+      <Footer theme={theme} />
     </div>
   );
 }

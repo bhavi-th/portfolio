@@ -27,9 +27,21 @@ export default function Navbar({ setTheme }) {
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        const storedTheme = localStorage.getItem("theme");
+        if (storedTheme === "white") {
+            document.body.classList.add("inverted");
+            setTheme(true);
+        }
+    }, [setTheme]);
+
     const toggleTheme = () => {
         document.body.classList.toggle("inverted");
-        setTheme(prev => !prev);
+        setTheme((prev) => {
+            const newTheme = !prev ? "white" : "dark";
+            localStorage.setItem("theme", newTheme);
+            return !prev;
+        });
     };
 
     return (
