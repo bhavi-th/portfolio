@@ -1,0 +1,100 @@
+.Card {
+    display: flex;
+    align-items: center;
+    gap: 1.5vmin;
+    height:100%;
+    margin: 2.5vmin;
+    padding: 2.5vmin;
+    border:2.5px solid white;
+    border-radius: 1.5vmin;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.inverted .Card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color:black;
+}
+
+.Card:hover {
+    background-color: transparent;
+    box-shadow: 0px 0px 5px 2px white;
+}
+
+.inverted .Card:hover {
+    box-shadow: 0px 0px 5px 5px black;
+}
+
+.Card img {
+    height: 50vmin;
+    aspect-ratio: 1.5/1;
+    border:2px solid white;
+    border-radius:1.5vmin;
+}
+
+.inverted .Card img{
+    border-color:black;
+}
+
+.Card:hover #GitHub {
+    box-sizing: content-box;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.inverted .Card:hover #GitHub {
+    background-color: none;
+    border-radius: 0%;
+}
+
+.Card-details{
+    padding-inline:2.5vmin;
+    height:50vmin;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Card-details div{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Card h3 {
+    display: inline-block;
+    font-size: 5vmin;
+}
+
+.Card p {
+    font-size: 3.5vmin;
+    text-indent: 5vmin;
+}
+
+.Card a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding:1vmin;
+    font-size:3vmin;
+    border:1px solid white;
+    border-radius:.5vmin;
+    cursor:pointer;
+    transition: background-color 250ms linear,color 250ms linear;
+}
+
+.Card a:hover{
+    background-color: black;
+    color:white;
+}
+
+.inverted .Card a{
+    border-color: black;
+    background-color: black;
+    color:white;
+}
+
+.inverted .Card a:hover{
+    background-color: white;
+    color: black;
+}
